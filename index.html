@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LeetMetric</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dark">
+
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>LeetMetric</h1>
+        <p class="subtitle">LeetCode Progress Dashboard</p>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <section class="search">
+      <input id="username" placeholder="Enter LeetCode username"/>
+      <button id="btn">Analyze</button>
+    </section>
+
+    <p id="error" class="error hidden"></p>
+    <section id="loader" class="loader hidden">Analyzing profile…</section>
+
+    <section id="dashboard" class="dashboard hidden">
+
+      <div class="cards">
+        <div class="card easy">Easy <span id="easy"></span></div>
+        <div class="card medium">Medium <span id="medium"></span></div>
+        <div class="card hard">Hard <span id="hard"></span></div>
+        <div class="card total">Total <span id="total"></span></div>
+      </div>
+
+      <div class="chart-box">
+        <h3>Difficulty Distribution</h3>
+        <div class="chart-container">
+          <canvas id="difficultyChart"></canvas>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
